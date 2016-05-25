@@ -1,0 +1,35 @@
+httpRequest请求头一般信息格式
+ get方式：
+	GET /qingdao.html?username=123&pwd=123 HTTP/1.1
+	Accept:text/html, */*
+	Accept-Language:zh-cn
+	Accept-Encoding:gzip,deflate
+	User-Agent:Mozilla/4.0(compatible;MSIE 5.01;Windows NT 5.0;DigExt)
+	Host: www.6book.net
+	Referer: http://www.6book.net/beijing.html
+	Connection:Keep-Alive
+ post方式：
+    POST /qingdao.html HTTP/1.1
+	Accept:text/html, */*
+	Accept-Language:zh-cn
+	Accept-Encoding:gzip,deflate
+	User-Agent:Mozilla/4.0(compatible;MSIE 5.01;Windows NT 5.0;DigExt)
+	Host: www.6book.net
+	Referer: http://www.6book.net/beijing.html
+	Connection:Keep-Alive
+	
+	username=123&pwd=123
+
+httpResponse响应报文头一般信息格式
+  1）.http协议版本 状态码 描述
+  2）.响应头
+  3）.响应正文
+  
+  如：
+	HTTP/1.1 200 ok
+	Date:Tue Apr 12 22:00:18 CST 2016
+	Content-Type:text/html;charset=UTF-8
+	Content-Length:80
+	
+	<html><head><title>构造http相应头信息</title></head> <body> 888888</body></html>
+注意：空格与换行。特别是响应头与响应正文之间的空行。
